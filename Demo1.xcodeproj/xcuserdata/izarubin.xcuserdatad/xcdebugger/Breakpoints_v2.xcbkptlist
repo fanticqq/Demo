@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Demo1/Details/DetailViewController.swift"
-            timestampString = "520861592.569406"
+            timestampString = "520863391.177248"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "31"
-            endingLineNumber = "31"
+            startingLineNumber = "44"
+            endingLineNumber = "44"
             landmarkName = "updateViewConstraints()"
             landmarkType = "7">
          </BreakpointContent>

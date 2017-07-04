@@ -16,13 +16,26 @@ class DetailViewController: UIViewController {
     
     private var didSetupConstraints = false
     
+    private lazy var layer: CALayer = {
+        let layer = CALayer()
+        layer.backgroundColor = UIColor.black.cgColor
+        return layer
+    }()
+    
     var text: String?
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         self.nameLabel.translatesAutoresizingMaskIntoConstraints = false
         self.detailsLabel.translatesAutoresizingMaskIntoConstraints = false
+        self.imageview.layer.addSublayer(layer)
         self.view.setNeedsUpdateConstraints()
+    }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        layer.frame = CGRect(x: 0, y: self.imageview.bounds.height + 1, width: self.imageview.bounds.width, height: 1)
     }
     
     override func updateViewConstraints() {
